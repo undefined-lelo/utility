@@ -1,0 +1,56 @@
+{
+	"name": "utility",
+	"private": true,
+	"version": "0.0.1",
+	"type": "module",
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"prepare": "svelte-kit sync",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"format": "prettier --write .",
+		"format:check": "prettier --check .",
+		"lint": "eslint .",
+		"sync": "svelte-kit sync",
+		"postinstall": "svelte-kit sync",
+		"deploy": "wrangler pages deploy .svelte-kit/cloudflare",
+		"preview:cf": "wrangler pages dev .svelte-kit/cloudflare"
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-cloudflare": "^8.0.2",
+		"@sveltejs/kit": "^3.0.0",
+		"@sveltejs/vite-plugin-svelte": "^7.2.0",
+		"@tailwindcss/vite": "^4.3.4",
+		"eslint": "^9.39.5",
+		"eslint-plugin-svelte": "^3.24.0",
+		"prettier": "^3.9.10",
+		"prettier-plugin-svelte": "^4.1.1",
+		"prettier-plugin-tailwindcss": "^0.8.1",
+		"svelte": "^5.57.2",
+		"svelte-check": "^4.6.0",
+		"tailwindcss": "^4.3.4",
+		"typescript": "^6.0.3",
+		"typescript-eslint": "^8.72.1",
+		"vite": "^8.3.0"
+	},
+	"imports": {
+		"#lib": "./src/lib/index.js",
+		"#lib/*": "./src/lib/*"
+	},
+	"dependencies": {
+		"@babel/parser": "^8.1.0",
+		"@lezer/common": "^1.5.5",
+		"@lezer/css": "^1.3.9",
+		"@lezer/python": "^1.1.19",
+		"@lezer/rust": "^1.0.3",
+		"@scalar/rust-fmt": "^0.3.0",
+		"@wasm-fmt/ruff_fmt": "^0.15.20",
+		"prettier-plugin-rust": "^0.1.9"
+	},
+	"allowScripts": {
+		"esbuild@0.28.2": true,
+		"workerd@1.20261103.1": true
+	}
+}

@@ -1,0 +1,1 @@
+yes this is ai slopped, i dont have the time nor do i care about this. it's just some simple thing i would like.
